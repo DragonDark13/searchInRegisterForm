@@ -500,3 +500,7 @@ body {
 .form-container .form-wrapper .forms .form.searchInRegisterForm .filterContainer > *:not(last-child) {
   padding-right: 15px;
 }
+
+.table-account-cont th:first-child {
+  width: 35px;
+}
