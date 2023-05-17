@@ -18,6 +18,102 @@
             </div>
         </div>
 
+        <div class="forms">
+            <div class="form searchInRegisterForm">
+                <div class="filterContainer">
+                    <div class="btns-cont">
+                        <button class="btn-register btn active">Реєстр</button>
+                    </div>
+                    <div class="input-cont">
+                        <label for="account-client-code">Станом на</label>
+
+                        <div class="input-col">
+                            <input type="text" id="account-client-code" name="AccountNumber"
+                                   placeholder=""
+                                   autocomplete="off">
+                            <p class="error-msg">Доступна кількість символів від 2 до 10, при пошуку
+                                враховуються
+                                тільки: А-я, A-z, 0-9, -, пробіл</p>
+                        </div>
+
+                    </div>
+                    <div class="input-cont">
+
+                        <label for="registerControlSelect">РУ</label>
+                        <div class="input-col">
+                            <select id="registerControlSelect" class="form-control">
+                                <option selected>Київське РУ</option>
+                                <option>Тернопільське РУ</option>
+                                <option>Житомирске РУ</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="input-cont">
+                        <label for="statusSelect">Статус</label>
+                        <div class="input-col">
+                            <select id="statusSelect" class="form-control">
+                                <option selected>Всі</option>
+                                <option>Актуальна</option>
+                                <option>Архівна</option>
+                                <option>Нова</option>
+                                <option>Скасована</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-cont">
+                        <label for="lastActionSelect">Остання дія </label>
+                        <div class="input-col">
+                            <select id="lastActionSelect" class="form-control">
+                                <option selected>Актуалізація</option>
+                                <option>Відхилено</option>
+                                <option value="">Виявлено зауваження</option>
+                                <option value=""> Доопрацювання</option>
+                                <option value="">Заявка</option>
+                                <option value=""> Не підтверджено</option>
+                                <option value=""> Підтверджено</option>
+                                <option value="">Узгоджено</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="input-cont">
+                        <label for="fisicalPerson">ФО</label>
+                        <div class="input-col">
+                            <input checked type="checkbox" id="fisicalPerson">
+                        </div>
+                    </div>
+                    <div class="input-cont">
+                        <label for="legalPerson">ЮО</label>
+                        <div class="input-col">
+                            <input checked type="checkbox" id="legalPerson">
+                        </div>
+                    </div>
+                    <div class="btns-cont">
+                        <button class="btn-filters btn active">Фільтри</button>
+                    </div>
+                    <div class="btns-cont">
+                        <button class="btn-refresh btn active">Оновити</button>
+                    </div>
+
+                </div>
+                <div class="buttonsContainer">
+                    <div class="btns-cont">
+                        <button title="Внести дані нової анкети" class="btn-new-ankens btn btn-outline active">
+                            <img src="../libs/images/file-earmark-text.svg" alt="">
+                        </button>
+                         <button title="Вивантажити в Excel" class="btn-new-download-in-excel btn btn-outline active">
+                            <img src="../libs/images/file-excel.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
         <div class="row d-flex align-items-center">
             <div class="col-md-2"><p class="tab_label">Тип пов’язаної з Банком особи</p></div>
             <div class="col-md-10">
@@ -35,40 +131,6 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="input-conts">
-                            <div class="input-cont">
-                                <div class="row">
-                                    <div class="col-md-4"><label for="account-client-code">Станом на</label></div>
-                                    <div class="col-md-8">
-                                        <div class="input-col">
-                                            <input type="text" id="account-client-code" name="AccountNumber"
-                                                   placeholder=""
-                                                   autocomplete="off">
-                                            <p class="error-msg">Доступна кількість символів від 2 до 10, при пошуку
-                                                враховуються
-                                                тільки: А-я, A-z, 0-9, -, пробіл</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input-cont">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="account-name">Реєстраційній номер</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="input-col">
-                                            <input type="text" id="account-name" name="Name" placeholder=""
-                                                   autocomplete="off">
-                                            <p class="error-msg">Доступна кількість символів від 2 до 250, при пошуку
-                                                враховуються
-                                                тільки: А-я, A-z, 0-9, -, “,”, `, ’, «, », :, ;, №, пробіл та знак *
-                                                (для
-                                                розширеного
-                                                пошуку)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="input-cont">
                                 <div class="row">
                                     <div class="col-md-4">
@@ -352,7 +414,7 @@
                 <tr class="table_header">
                     <th data-column-id="Id" data-identifier="true" data-visible='false'>Регіональне управління</th>
                     <th data-column-id="Name" data-order="asc" data-formatter="link">Прізвище, Ім'я, по-батькові</th>
-<!--                    <th data-column-id="AccountNumber">Перехід до анкет, за якими внесена інформація в Реєстр</th>-->
+                    <!--                    <th data-column-id="AccountNumber">Перехід до анкет, за якими внесена інформація в Реєстр</th>-->
                     <th data-column-id="StatusCode">Реєстраційний номер</th>
                     <th data-column-id="RU" data-formatter="isCurrentUserRuCode">Серія, номер документу</th>
                     <th data-column-id="RUCode" data-visible='false'>Підгрупи, до яких належить</th>
@@ -368,7 +430,7 @@
                         Волинське РУ
                     </td>
                     <td> Грушевський Михайло Сергійович.</td>
-<!--                    <td>1234567890</td>-->
+                    <!--                    <td>1234567890</td>-->
                     <td>
                         АС 034659
                     </td>
@@ -389,12 +451,12 @@
                         Вінницьке РУ
                     </td>
                     <td>Грушевський Михайло Андрійович</td>
-<!--                    <td>1023456789</td>-->
+                    <!--                    <td>1023456789</td>-->
                     <td>
                         АЮ 034659
                     </td>
                     <td>
-                       1.4.1 Асоційовані особи керівників банку
+                        1.4.1 Асоційовані особи керівників банку
                     </td>
                     <td>
                         Ні

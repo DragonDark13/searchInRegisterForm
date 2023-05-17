@@ -472,3 +472,31 @@ body {
   border: 1px solid #C1C1C1;
   border-radius: 0;
 }
+
+.form-container .form-wrapper .forms .form.searchInRegisterForm .btns-cont {
+  margin-top: 0;
+}
+
+.form-container .form-wrapper .forms .form.searchInRegisterForm {
+  margin-top: 30px;
+}
+.form-container .form-wrapper .forms .form.searchInRegisterForm .input-cont {
+  display: inline-block;
+}
+.form-container .form-wrapper .forms .form.searchInRegisterForm .input-cont label {
+  display: inline-block;
+  padding-right: 5px;
+}
+.form-container .form-wrapper .forms .form.searchInRegisterForm .btns-cont {
+  display: inline-block;
+}
+.form-container .form-wrapper .forms .form.searchInRegisterForm .input-col {
+  width: auto;
+}
+.form-container .form-wrapper .forms .form.searchInRegisterForm .form-control {
+  height: 26px;
+  border-radius: 0;
+}
+.form-container .form-wrapper .forms .form.searchInRegisterForm .filterContainer > *:not(last-child) {
+  padding-right: 15px;
+}
